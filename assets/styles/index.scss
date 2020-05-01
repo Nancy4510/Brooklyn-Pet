@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  //align-items: center;
+  //background-image: url("https://res.cloudinary.com/dyiugkn4y/video/upload/v1586734961/Brooklyn%20Pet%20Project/Dog_Video.mp4");
 }
 
 h1 {
@@ -9,15 +9,21 @@ h1 {
   padding-top: 50px;
 }
 
-.container {
-  display: flex;
+a {
+  text-align: center;
 }
 
-form {
-  // align-items: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 40px;
-  width: 300px;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+// form {
+//   // align-items: center;
+//   border: 1px solid black;
+//   border-radius: 5px;
+//   padding: 20px;
+//   margin: 40px;
+//   width: 300px;
+// }
