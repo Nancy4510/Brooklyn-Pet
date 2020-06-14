@@ -73,6 +73,26 @@
           </form>
         </li>
 
+        <!-- CHANGE PASSWORD FORM -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Change Password
+          </a>
+          <form id='change-password' class="dropdown-menu p-4">
+            <!-- <div class="form-group">
+              <label for="exampleDropdownFormEmail2">Email address</label>
+              <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="email address">
+            </div> -->
+            <div class="form-group">
+              <label for="exampleDropdownFormPassword2">Old Password</label>
+              <input type="password" name="passwords[old]" class="form-control" id="exampleDropdownFormPassword2" placeholder="Old Password">
+              <label for="exampleDropdownFormPassword2">New Password</label>
+              <input type="password" name="passwords[new]" class="form-control" id="exampleDropdownFormPassword2" placeholder="New Password">
+            </div>
+            <button id='btnChangePassword' type="submit" class="btn btn-primary">Change Password</button>
+          </form>
+        </li>
+
         <!-- SIGN OUT FORM -->
         <div class="signOut">
           <form id='sign-out'>
@@ -84,8 +104,8 @@
     </div>
   </nav>
 
+  <p id="message"></p>
   <h1>Brooklyn Pet</h1>
-
   <div id="div-services">Services</div>
   <div id="div-about">About</div>
   <div id="div-contact">Contact</div>

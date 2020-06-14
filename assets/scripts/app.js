@@ -15,4 +15,16 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('.signOut').hide()
+
+  $('#btnSignIn').on('click', function (event) {
+    $('.signOut').show()
+
+    $('#btnSignUp').on('click', function (event) {
+      $('.signOut').show()
+
+      $('#btnSignOut').on('click', function (event) {
+        $('.signOut').hide()
+      })
+    })
+  })
 })
