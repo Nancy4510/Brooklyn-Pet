@@ -39,7 +39,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sign-In
           </a>
-          <form class="dropdown-menu p-4">
+          <form id='sign-in' class="dropdown-menu p-4">
             <div class="form-group">
               <label for="exampleDropdownFormEmail2">Email address</label>
               <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="email address">
@@ -48,7 +48,7 @@
               <label for="exampleDropdownFormPassword2">Password</label>
               <input type="password" name="credentials[password]" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-primary">Sign-in</button>
+            <button id='btnSignIn' type="submit" class="btn btn-primary">Sign-in</button>
           </form>
 
         </li>
@@ -58,7 +58,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sign-Up
           </a>
-          <form class="dropdown-menu p-4">
+          <form id='sign-up' class="dropdown-menu p-4">
             <div class="form-group">
               <label for="exampleDropdownFormEmail2">Email address</label>
               <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="email address">
@@ -69,11 +69,16 @@
               <label for="exampleDropdownFormPassword2">Confirm Password</label>
               <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-primary">Sign-up</button>
+            <button id='btnSignUp' type="submit" class="btn btn-primary">Sign-up</button>
           </form>
         </li>
 
-
+        <!-- SIGN OUT FORM -->
+        <div class="signOut">
+          <form id='sign-out'>
+            <button id='btnSignOut' type="button" class="btn btn-primary">Sign Out</button>
+          </form>
+        </div>
 
       </ul>
     </div>
@@ -81,6 +86,9 @@
 
   <h1>Brooklyn Pet</h1>
 
-</body>
+  <div id="div-services">Services</div>
+  <div id="div-about">About</div>
+  <div id="div-contact">Contact</div>
 
+</body>
 </html>

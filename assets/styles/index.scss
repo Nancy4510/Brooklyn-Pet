@@ -9,15 +9,35 @@ h1 {
   padding-top: 50px;
 }
 
-// .navbar .navbar-collapse {
-//   text-align: center;
-// }
+#div-services {
+  border: solid 2px red;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 100px;
+  width: 900px;
+}
 
-// form {
-//   // align-items: center;
-//   border: 1px solid black;
-//   border-radius: 5px;
-//   padding: 20px;
-//   margin: 40px;
-//   width: 300px;
-// }
+#div-about {
+  border: solid 2px red;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 100px;
+  width: 900px;
+}
+
+#div-contact {
+  border: solid 2px red;
+  height: 300px;
+  margin: auto;
+  width: 900px;
+}
+
+.success {
+  color: green;
+  font-size: 30px;
+}
+
+.failure {
+  color: red;
+  font-size: 30px;
+}
