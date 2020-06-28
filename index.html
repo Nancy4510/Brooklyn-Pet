@@ -42,11 +42,11 @@
           <form id='sign-in' class="dropdown-menu p-4">
             <div class="form-group">
               <label for="exampleDropdownFormEmail2">Email address</label>
-              <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="email address">
+              <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="">
             </div>
             <div class="form-group">
               <label for="exampleDropdownFormPassword2">Password</label>
-              <input type="password" name="credentials[password]" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+              <input type="password" name="credentials[password]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
             </div>
             <button id='btnSignIn' type="submit" class="btn btn-primary">Sign-in</button>
           </form>
@@ -61,53 +61,55 @@
           <form id='sign-up' class="dropdown-menu p-4">
             <div class="form-group">
               <label for="exampleDropdownFormEmail2">Email address</label>
-              <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="email address">
+              <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="">
             </div>
             <div class="form-group">
               <label for="exampleDropdownFormPassword2">Password</label>
-              <input type="password" name="credentials[password]" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+              <input type="password" name="credentials[password]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
               <label for="exampleDropdownFormPassword2">Confirm Password</label>
-              <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+              <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
             </div>
             <button id='btnSignUp' type="submit" class="btn btn-primary">Sign-up</button>
           </form>
         </li>
 
         <!-- CHANGE PASSWORD FORM -->
+        <div class="changePassword">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Change Password
           </a>
           <form id='change-password' class="dropdown-menu p-4">
-            <!-- <div class="form-group">
-              <label for="exampleDropdownFormEmail2">Email address</label>
-              <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="email address">
-            </div> -->
             <div class="form-group">
               <label for="exampleDropdownFormPassword2">Old Password</label>
-              <input type="password" name="passwords[old]" class="form-control" id="exampleDropdownFormPassword2" placeholder="Old Password">
+              <input type="password" name="passwords[old]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
               <label for="exampleDropdownFormPassword2">New Password</label>
-              <input type="password" name="passwords[new]" class="form-control" id="exampleDropdownFormPassword2" placeholder="New Password">
+              <input type="password" name="passwords[new]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
             </div>
             <button id='btnChangePassword' type="submit" class="btn btn-primary">Change Password</button>
           </form>
         </li>
+      </div>
 
         <!-- SIGN OUT FORM -->
         <div class="signOut">
           <form id='sign-out'>
-            <button id='btnSignOut' type="button" class="btn btn-primary">Sign Out</button>
+            <button id='btnSignOut' class="btn btn-primary">Sign Out</button>
           </form>
         </div>
-
       </ul>
     </div>
   </nav>
 
   <p id="message"></p>
   <h1>Brooklyn Pet</h1>
-  <div id="div-services">Services</div>
-  <div id="div-about">About</div>
+  <div id="div-services">Services
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div id="div-about">About
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
   <div id="div-contact">Contact</div>
 
 </body>

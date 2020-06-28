@@ -13,16 +13,21 @@ $(() => {
   // FORMS
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+  $('.changePassword').hide()
   $('.signOut').hide()
 
   $('#btnSignIn').on('click', function (event) {
+    $('.changePassword').show()
     $('.signOut').show()
 
     $('#btnSignUp').on('click', function (event) {
+      $('.changePassword').show()
       $('.signOut').show()
 
       $('#btnSignOut').on('click', function (event) {
+        $('.changePassword').hide()
         $('.signOut').hide()
       })
     })
