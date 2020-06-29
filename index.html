@@ -74,7 +74,7 @@
         </li>
 
         <!-- CHANGE PASSWORD FORM -->
-        <div class="changePassword">
+        <div class="changePasswordDiv">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Change Password
@@ -92,7 +92,7 @@
       </div>
 
         <!-- SIGN OUT FORM -->
-        <div class="signOut">
+        <div class="signOutDiv">
           <form id='sign-out'>
             <button id='btnSignOut' class="btn btn-primary">Sign Out</button>
           </form>
@@ -110,7 +110,51 @@
   <div id="div-about">About
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
+
   <div id="div-contact">Contact</div>
+
+<!-- RESERVATION FORM -->
+
+  <div class="reservationFormDiv">
+    <form id ='reservation-form'>
+  <!-- <div class="form-row"> 👇-->
+  <div class="form">
+    <div class="form-group col-md-4">
+      <label for="inputEmail4"></label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="First Name">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputPassword4"></label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="form-group col-md-4">
+    <label for="inputCity"></label>
+    <input type="text" class="form-control" id="inputCity" placeholder="Pet Name">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="inputState"></label>
+    <select id="inputState" class="form-control">
+      <option selected>Service</option>
+      <option>Daycare</option>
+      <option>Boarding</option>
+    </select>
+    <div class="form-group col-md-9">
+      <label for="inputCity"></label>
+      <input type="text" class="form-control" id="inputCity" placeholder="Date">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-5">
+      <label for="inputZip"></label>
+      <input type="text" class="form-control" id="inputZip" placeholder="Notes">
+    </div>
+  </div>
+  <div class="form-group">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  </div>
 
 </body>
 </html>
