@@ -11,24 +11,24 @@ const authEvents = require('./auth/events')
 $(() => {
   // your JS code goes here
   // FORMS
-  $('#sign-up').on('submit', authEvents.onSignUp)
-  $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#sign-out').on('click', authEvents.onSignOut)
-  $('.changePassword').hide()
-  $('.signOut').hide()
+  $('#sign-up-form').on('submit', authEvents.onSignUp)
+  $('#sign-in-form').on('submit', authEvents.onSignIn)
+  $('#change-password-form').on('submit', authEvents.onChangePassword)
+  $('#sign-out-form').on('click', authEvents.onSignOut)
+  $('.changePasswordDiv').hide()
+  $('.signOutDiv').hide()
 
   $('#btnSignIn').on('click', function (event) {
-    $('.changePassword').show()
-    $('.signOut').show()
+    $('.changePasswordDiv').show()
+    $('.signOutDiv').show()
 
     $('#btnSignUp').on('click', function (event) {
-      $('.changePassword').show()
-      $('.signOut').show()
+      $('.changePasswordDiv').show()
+      $('.signOutDiv').show()
 
       $('#btnSignOut').on('click', function (event) {
-        $('.changePassword').hide()
-        $('.signOut').hide()
+        $('.changePasswordDiv').hide()
+        $('.signOutDiv').hide()
       })
     })
   })

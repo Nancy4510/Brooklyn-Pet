@@ -39,7 +39,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sign-In
           </a>
-          <form id='sign-in' class="dropdown-menu p-4">
+          <form id='sign-in-form' class="dropdown-menu p-4">
             <div class="form-group">
               <label for="exampleDropdownFormEmail2">Email address</label>
               <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="">
@@ -58,7 +58,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sign-Up
           </a>
-          <form id='sign-up' class="dropdown-menu p-4">
+          <form id='sign-up-form' class="dropdown-menu p-4">
             <div class="form-group">
               <label for="exampleDropdownFormEmail2">Email address</label>
               <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="">
@@ -79,7 +79,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Change Password
           </a>
-          <form id='change-password' class="dropdown-menu p-4">
+          <form id='change-password-form' class="dropdown-menu p-4">
             <div class="form-group">
               <label for="exampleDropdownFormPassword2">Old Password</label>
               <input type="password" name="passwords[old]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
@@ -93,7 +93,7 @@
 
         <!-- SIGN OUT FORM -->
         <div class="signOutDiv">
-          <form id='sign-out'>
+          <form id='sign-out-form'>
             <button id='btnSignOut' class="btn btn-primary">Sign Out</button>
           </form>
         </div>
@@ -102,7 +102,7 @@
   </nav>
 
   <p id="message"></p>
-  <h1>Brooklyn Pet</h1>
+  <h1>Welcome to Brooklyn Pet</h1>
   <div id="div-services">Services
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
@@ -140,15 +140,15 @@
       <option>Boarding</option>
     </select>
     <div class="form-group col-md-9">
-      <label for="inputCity"></label>
-      <input type="text" class="form-control" id="inputCity" placeholder="Date">
+      <label for="inputEmail4"></label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Date">
     </div>
   </div>
   <div class="form-row">
-    <div class="form-group col-md-5">
-      <label for="inputZip"></label>
-      <input type="text" class="form-control" id="inputZip" placeholder="Notes">
-    </div>
+    <div class="form-group col-md-4">
+     <label for="exampleFormControlTextarea1"></label>
+     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Notes" rows="3"></textarea>
+   </div>
   </div>
   <div class="form-group">
   </div>
