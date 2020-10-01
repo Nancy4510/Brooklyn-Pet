@@ -17,10 +17,14 @@ $(() => {
   $('#sign-out-form').on('click', authEvents.onSignOut)
   $('.changePasswordDiv').hide()
   $('#sign-out-form').hide()
+  $('.reservationFormDiv').hide()
 
   $('#btnSignIn').on('click', function (event) {
     $('.changePasswordDiv').show()
     $('.signOutDiv').show()
+    $('#div-services').hide()
+    $('#div-about').hide()
+    $('#div-contact').hide()
 
     $('#btnSignUp').on('click', function (event) {
       $('.changePasswordDiv').show()
