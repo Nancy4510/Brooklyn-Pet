@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Brooklyn Pet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,21 +73,21 @@
 
         <!-- CHANGE PASSWORD FORM -->
         <div class="changePasswordDiv">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Change Password
-          </a>
-          <form id='change-password-form' class="dropdown-menu p-4">
-            <div class="form-group">
-              <label for="exampleDropdownFormPassword2">Old Password</label>
-              <input type="password" name="passwords[old]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
-              <label for="exampleDropdownFormPassword2">New Password</label>
-              <input type="password" name="passwords[new]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
-            </div>
-            <button id='btnChangePassword' type="submit" class="btn btn-primary">Change Password</button>
-          </form>
-        </li>
-      </div>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Change Password
+            </a>
+            <form id='change-password-form' class="dropdown-menu p-4">
+              <div class="form-group">
+                <label for="exampleDropdownFormPassword2">Old Password</label>
+                <input type="password" name="passwords[old]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
+                <label for="exampleDropdownFormPassword2">New Password</label>
+                <input type="password" name="passwords[new]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
+              </div>
+              <button id='btnChangePassword' type="submit" class="btn btn-primary">Change Password</button>
+            </form>
+          </li>
+        </div>
 
         <!-- SIGN OUT FORM -->
         <div class="signOutDiv">
@@ -102,74 +103,76 @@
 
   <img class='pet-image' src="https://res.cloudinary.com/dyiugkn4y/image/upload/v1601565925/Brooklyn%20Pet%20Project/dog1.jpg" alt="">
   <h1 class='main-title'>Br<i class="fas fa-paw fa-sm"></i><i class="fas fa-paw fa-sm"></i>klyn Pet</h1>
-
   <section id="sec-services">
     <div class="container">
       <h3>Services</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <div class="sec-services-pic">
-    <img src="http://placekitten.com/g/200/300" alt="">
-  </div>
-  </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="sec-services-pic">
+        <img class="sec-img" src="http://placekitten.com/g/200/200" alt="">
+      </div>
+    </div>
   </section>
 
   <section id="sec-about">
-  <div class="container">
-    <h3>About</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <img src="http://placekitten.com/g/200/300" alt="">
-  </div>
-</section>
+    <div class="container">
+      <h3>About</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <img class="sec-img" src="http://placekitten.com/g/200/200" alt="">
+    </div>
+  </section>
 
   <!-- <div id="div-contact">Contact</div> -->
 
-<!-- RESERVATION FORM -->
+  <!-- RESERVATION FORM -->
   <div class="reservation-form-div">
-    <form id ='reservation-form'>
-  <!-- <div class="form-row"> 👇-->
-  <div class="form">
-    <div class="form-group col-md-4">
-      <label for="inputEmail4"></label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="First Name">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputPassword4"></label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputPassword4"></label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="email">
-    </div>
-  </div>
-  <div class="form-group col-md-4">
-    <label for="inputCity"></label>
-    <input type="text" class="form-control" id="inputCity" placeholder="Pet Name">
-  </div>
-  <div class="form-group col-md-4">
-    <label for="inputState"></label>
-    <select id="inputState" class="form-control">
-      <option selected>Service</option>
-      <option>Daycare</option>
-      <option>Boarding</option>
-    </select>
-    <div class="form-group col-md-9">
-      <label for="inputEmail4"></label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Date">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-4">
-     <label for="exampleFormControlTextarea1"></label>
-     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Notes" rows="3"></textarea>
-   </div>
-  </div>
-  <div class="form-group">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    <form id='reservation-form'>
+      <!-- <div class="form-row"> 👇-->
+      <div class="form">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4"></label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="First Name">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4"></label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4"></label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="email">
+        </div>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputCity"></label>
+        <input type="text" class="form-control" id="inputCity" placeholder="Pet Name">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState"></label>
+        <select id="inputState" class="form-control">
+          <option selected>Service</option>
+          <option>Daycare</option>
+          <option>Boarding</option>
+        </select>
+        <div class="form-group col-md-9">
+          <label for="inputEmail4"></label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="Date">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="exampleFormControlTextarea1"></label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Notes" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
   <footer>
     <p>&copy; 2020 Created by Nancy Cruz</p>
   </footer>
 </body>
+
 </html>

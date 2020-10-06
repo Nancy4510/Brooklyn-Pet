@@ -28,7 +28,7 @@ body {
 
 #sec-services {
   //background-color: #E8BE9B;
-  border: solid 2px red;
+  //border: solid 2px red;
   //height: 300px;
   //margin: auto;
   //margin: 45px 100px;
@@ -37,20 +37,32 @@ body {
 
 #sec-about {
   //background-color: #FFE691;
-  border: solid 2px red;
+  //border: solid 2px red;
   //height: 300px;
   //margin: auto;
   //margin-top: 45px;
   //width: 900px;
 }
 
-p {
-  margin-right: 70px;
-  padding: 50px;
-}
-
 .container {
   display: flex;
+}
+
+h3 {
+  //text-align: center;
+  margin-top: 30px;
+}
+
+p {
+  //margin-right: 70px;
+  //padding (top, right, bottom, left)
+  padding-top: 100px;
+  padding-right: 200px;
+}
+
+.sec-img {
+  border-radius: 8px;
+  margin-top: 60px;
 }
 
 #div-contact {
