@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 body {
-  //background-image: url("https://res.cloudinary.com/dyiugkn4y/video/upload/v1586734961/Brooklyn%20Pet%20Project/Dog_Video.mp4");
+
 }
 
 .pet-icon {
@@ -13,9 +13,9 @@ body {
 .main-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 80px;
+  left: 50%;
   position: absolute;
   top: 20%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -26,29 +26,31 @@ body {
   opacity: 1;
 }
 
-// .container {
-//   display: flex;
-// }
-
-.wrapper {
-  width: 80%;
-  margin: 0 auto;
-}
-
 #sec-services {
+  //background-color: #E8BE9B;
   border: solid 2px red;
-  height: 300px;
-  margin: auto;
-  margin-bottom: 100px;
-  width: 900px;
+  //height: 300px;
+  //margin: auto;
+  //margin: 45px 100px;
+  //width: 900px;
 }
 
 #sec-about {
+  //background-color: #FFE691;
   border: solid 2px red;
-  height: 300px;
-  margin: auto;
-  margin-bottom: 100px;
-  width: 900px;
+  //height: 300px;
+  //margin: auto;
+  //margin-top: 45px;
+  //width: 900px;
+}
+
+p {
+  margin-right: 70px;
+  padding: 50px;
+}
+
+.container {
+  display: flex;
 }
 
 #div-contact {
@@ -58,7 +60,7 @@ body {
   width: 900px;
 }
 
-.reservationFormDiv {
+.reservation-form-div {
   border: solid 2px red;
   margin: auto;
   margin-top: 20px;

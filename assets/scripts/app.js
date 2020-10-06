@@ -17,7 +17,7 @@ $(() => {
   $('#sign-out-form').on('click', authEvents.onSignOut)
   $('.changePasswordDiv').hide()
   $('#sign-out-form').hide()
-  $('.reservationFormDiv').hide()
+  $('.reservation-form-div').hide()
 
   $('#btnSignIn').on('click', function (event) {
     $('.changePasswordDiv').show()
