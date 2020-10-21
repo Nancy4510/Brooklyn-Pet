@@ -26,31 +26,39 @@ body {
   opacity: 1;
 }
 
-#sec-services {
-  //background-color: #E8BE9B;
-  //border: solid 2px red;
-  //height: 300px;
-  //margin: auto;
-  //margin: 45px 100px;
-  //width: 900px;
-}
-
-#sec-about {
-  //background-color: #FFE691;
-  //border: solid 2px red;
-  //height: 300px;
-  //margin: auto;
-  //margin-top: 45px;
-  //width: 900px;
-}
-
 .container {
   display: flex;
 }
 
+.who-we-are-section {
+}
+
+.cards {
+  padding-top: 50px;
+}
+
+.card-1, .card-2, .card-3 {
+  box-shadow: -1px 1px 10px 0px rgba(0,0,0,0.59);
+  margin: 30px;
+}
+
+.card-1:hover {
+  transform: scale(1.1);
+}
+
+.card-2:hover {
+  transform: scale(1.1);
+}
+
+.card-3:hover {
+  transform: scale(1.1);
+}
+
 h3 {
-  //text-align: center;
+  font-size: 50px;
   margin-top: 30px;
+  padding-right: 100px;
+  text-align: center;
 }
 
 .p-sections {
@@ -59,24 +67,17 @@ h3 {
   padding-right: 200px;
 }
 
-.sec-img {
+.who-we-are-img {
   border-radius: 8px;
   margin-top: 60px;
 }
 
-#sec-contact {
+.contact-section {
   border: solid 2px red;
-  // height: 300px;
-  // margin: auto;
-  // width: 900px;
 }
 
 .fa-phone {
   padding-right: -10px;
-}
-
-address {
-  padding-top: 100px;
 }
 
 i {
