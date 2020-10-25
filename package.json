@@ -9,7 +9,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.1.2",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.1",
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
@@ -33,11 +33,11 @@
     "grunt-sass-lint": "^0.2.4",
     "grunt-shell": "^2.1.0",
     "grunt-webpack": "^3.0.2",
-    "handlebars": "^4.0.11",
+    "handlebars": "^4.7.6",
     "handlebars-loader": "^1.6.0",
     "load-grunt-config": "^0.19.2",
     "node-libs-browser": "^2.1.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.14.1",
     "on-build-webpack": "^0.1.0",
     "opn": "^5.4.0",
     "postcss-loader": "^2.1.6",
