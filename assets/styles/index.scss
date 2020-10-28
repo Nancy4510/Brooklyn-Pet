@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 body {
-  background-color: #F4F7F8;
+  // background-color: #F4F7F8;
+  background-color: black;
 }
 
 .pet-icon {
@@ -20,7 +21,7 @@ body {
 }
 
 .main-pet-image {
-  height: 100vh;
+  height: 91vh;
   margin: auto;
   opacity: 1;
   width: 100%;
@@ -31,6 +32,7 @@ body {
 }
 
 .who-we-are-p {
+  color: white;
   font-size: 20px;
 }
 
@@ -45,6 +47,11 @@ body {
 
 .services-section {
   padding-top: 20px;
+}
+
+.services-title {
+  color: white;
+  padding-left: 4%;
 }
 
 .cards {
@@ -80,8 +87,20 @@ h3 {
 }
 
 .p-sections {
-  //padding (top, right, bottom, left)
+  //(top, right, bottom, left)
   padding-top: 50px;
+}
+
+.coming-soon-card {
+  margin-top: 50px;
+}
+
+.coming-soon-title {
+  font-size: 30px;
+}
+
+.coming-soon-p {
+  font-size: 20px;
 }
 
 .fa-phone {
