@@ -18,6 +18,7 @@ $(() => {
   $('.changePasswordDiv').hide()
   $('#sign-out-form').hide()
   $('.reservation-form-div').hide()
+  $('.message').hide()
 
   $('#btnSignIn').on('click', function (event) {
     $('.changePasswordDiv').show()
