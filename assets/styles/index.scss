@@ -3,7 +3,7 @@
 
 body {
   // background-color: #F4F7F8;
-  background-color: black;
+  background-color: #cfac41;
 }
 
 .pet-icon {
@@ -31,14 +31,20 @@ body {
   display: flex;
 }
 
+.who-we-are-title {
+
+}
+
 .who-we-are-p {
-  color: white;
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .who-we-are-img {
   border-radius: 8px;
   box-shadow: 0px 5px 11px -2px rgba(0,0,0,0.75);
+  //box-shadow: -9px -11px 9px -7px rgba(255,255,255,1);
+  //box-shadow: 1px 4px 39px -3px rgba(255,255,255,1);
   height: 300px;
   margin-left: 60px;
   margin-top: 60px;
@@ -50,7 +56,6 @@ body {
 }
 
 .services-title {
-  color: white;
   padding-left: 4%;
 }
 
@@ -100,7 +105,7 @@ h3 {
 }
 
 .coming-soon-p {
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .fa-phone {
