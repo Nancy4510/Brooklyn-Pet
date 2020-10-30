@@ -19,7 +19,6 @@ $(() => {
   $('#sign-out-form').hide()
   $('.reservation-form-div').hide()
   $('.message').hide()
-
   $('#btnSignIn').on('click', function (event) {
     $('.changePasswordDiv').show()
     $('.signOutDiv').show()
@@ -35,6 +34,19 @@ $(() => {
         $('.changePasswordDiv').hide()
         $('.signOutDiv').hide()
       })
+    })
+  })
+
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 40) {
+        $('#back-to-top-btn').fadeIn()
+      } else {
+        $('#back-to-top-btn').fadeOut()
+      }
+    })
+    $('#back-to-top-btn').click(function () {
+      $('html, body').animate({scrollTop: 0}, 800)
     })
   })
 })
