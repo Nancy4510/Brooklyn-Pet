@@ -37,6 +37,7 @@ $(() => {
     })
   })
 
+  // Back to the top buttom code
   $(document).ready(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 40) {
