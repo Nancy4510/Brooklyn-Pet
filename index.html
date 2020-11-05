@@ -10,6 +10,8 @@
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="https://kit.fontawesome.com/f3a8f57985.js" crossorigin="anonymous"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -162,18 +164,19 @@
     </div>
   </section>
 
-<div class="coming-soon-card">
-  <div class="card text-center">
-    <div class="card-header">
+  <div class="coming-soon-card">
+    <div class="card text-center">
+      <div class="card-header">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title coming-soon-title">Coming Soon!</h5>
+        <p class="card-text coming-soon-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="card-footer text-muted">
+      </div>
     </div>
-    <div class="card-body">
-      <h5 class="card-title coming-soon-title">Coming Soon!</h5>
-      <p class="card-text coming-soon-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="card-footer text-muted">
-    </div>
-  </div>
   </div>
 
   <!-- RESERVATION FORM BEGINS-->
@@ -223,6 +226,7 @@
   <!-- RESERVATION FORM ENDS-->
 
   <footer id="Contact">
+
     <h4>Get in touch or stop by!</h4>
     <div class="container">
       <address class="address">
@@ -234,8 +238,10 @@
         <br>
         <i class="fas fa-envelope">brooklynpet@gmail.com</i>
       </address>
-      <iframe class="mapbox-map"
-  src='https://api.mapbox.com/styles/v1/mapbox/streets-v11.html?title=true&zoomwheel=false&access_token=pk.eyJ1IjoibmFuY3k0NTEwIiwiYSI6ImNraDB4MG56cjFobmczM3F4NTAwOTU1bjkifQ.Gcp0TsL-sfWoR7fX6bvsIg#15/37.771/-122.436' />
+      <!-- <iframe class="mapbox-map"
+        src='https://api.mapbox.com/styles/v1/mapbox/streets-v11.html?title=false&zoomwheel=false&access_token=pk.eyJ1IjoibmFuY3k0NTEwIiwiYSI6ImNraDB4MG56cjFobmczM3F4NTAwOTU1bjkifQ.Gcp0TsL-sfWoR7fX6bvsIg#15/40.679420/-74.004830'></iframe> -->
+        <div id="map">
+        </div>
     </div>
     <button id="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
     <p>&copy; 2020 Created by <a class="footer-linkedin" href="https://www.linkedin.com/in/nancy-cruz4510/" target="_blank">Nancy Cruz</a></p>
