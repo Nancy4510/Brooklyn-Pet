@@ -37,7 +37,7 @@ $(() => {
     })
   })
 
-  // Back to the top buttom code
+  // Back to the top button code
   $(document).ready(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 40) {
@@ -47,7 +47,45 @@ $(() => {
       }
     })
     $('#back-to-top-btn').click(function () {
-      $('html, body').animate({scrollTop: 0}, 800)
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800)
     })
+  })
+
+  // code for map and maker from 'https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/#add-html-markers'
+  mapboxgl.accessToken = 'pk.eyJ1IjoibmFuY3k0NTEwIiwiYSI6ImNraDB4MG56cjFobmczM3F4NTAwOTU1bjkifQ.Gcp0TsL-sfWoR7fX6bvsIg'
+
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v10',
+    center: [-74.004830, 40.679420],
+    zoom: 16
+  })
+
+  const geojson = {
+    type: 'FeatureCollection',
+    features: [{
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-74.004830, 40.679420]
+      },
+      properties: {
+        title: 'Mapbox',
+        description: 'Brooklyn, N.Y.'
+      }
+    }]
+  }
+
+  geojson.features.forEach(function (marker) {
+  // create a HTML element for each feature
+    const el = document.createElement('div')
+    el.className = 'marker'
+
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map)
   })
 })
