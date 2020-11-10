@@ -11,7 +11,7 @@
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="https://kit.fontawesome.com/f3a8f57985.js" crossorigin="anonymous"></script>
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -108,11 +108,7 @@
     <i class="fas fa-dog fa-3x fa-flip-horizontal pet-icon"></i>
   </nav>
 
-  <div class="alert alert-success message success" role="alert">
-  </div>
-
-  <div class="alert alert-danger message failure" role="alert">
-  </div>
+  <p id="message"></p>
 
   <img class='main-pet-image' src="https://res.cloudinary.com/dyiugkn4y/image/upload/v1601565925/Brooklyn%20Pet%20Project/dog1.jpg" alt="">
   <h1 class='main-title'>Br<i class="fas fa-paw fa-sm"></i><i class="fas fa-paw fa-sm"></i>klyn Pet</h1>
@@ -158,7 +154,6 @@
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Learn More</a>
           </div>
-
         </div>
       </div>
     </div>
@@ -179,64 +174,131 @@
     </div>
   </div>
 
-  <!-- RESERVATION FORM BEGINS-->
-  <div class="reservation-form-div">
-    <form id='reservation-form'>
+  <!-- CREATE RESERVATION FORM BEGINS-->
+  <div class="create-reservation-form-div">
+    <form id='create-reservation-form'>
       <div class="form">
-
         <div class="div-input">
-
-        <div class="form-group col-md-4">
-          <label for="inputFirstName"></label>
-          <input type="text" class="form-control reservation-form-input" id="inputFirstName" placeholder="First Name">
-        </div>
-
-        <div class="form-group col-md-4">
-          <label for="inputLastName"></label>
-          <input type="text" class="form-control reservation-form-input" id="inputLastName" placeholder="Last Name">
-        </div>
-
-        <div class="form-group col-md-4">
-          <label for="inputEmail4"></label>
-          <input type="email" class="form-control reservation-form-input" id="inputEmail4" placeholder="email">
-        </div>
-
-      <div class="form-group col-md-4">
-        <label for="inputPetName"></label>
-        <input type="text" class="form-control reservation-form-input" id="inputPetName" placeholder="Pet Name">
-      </div>
-
-      <div class="form-group col-md-4">
-        <label for="inputService"></label>
-        <select id="inputService" class="form-control reservation-form-input">
-          <option selected>Service</option>
-          <option>Daycare</option>
-          <option>Boarding</option>
-        </select>
-
-        <div class="form-group col-md-12">
-          <label for="inputDate"></label>
-          <input type="date" class="form-control reservation-form-input" id="inputDate" placeholder="Date">
+          <h1>Create your Reservation</h1>
+          <div class="form-group col-md-4">
+            <label for="inputFirstName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputFirstName" name="reservation[firstName]" placeholder="First Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputLastName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputLastName" name="reservation[lastName]" placeholder="Last Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputEmail4"></label>
+            <input type="email" class="form-control reservation-form-input" id="inputEmail4" name="reservation[email]" placeholder="email" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPetName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputPetName" name="reservation[petName]" placeholder="Pet Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputService"></label>
+            <select id="inputService" class="form-control reservation-form-input" name="reservation[service]" required>
+              <option selected>Service</option>
+              <option>Daycare</option>
+              <option>Boarding</option>
+            </select>
+            <div class="form-group col-md-12">
+              <label for="inputDate"></label>
+              <input type="date" class="form-control reservation-form-input" id="inputDate" name="reservation[date]" placeholder="Date" required>
+            </div>
+          </div>
         </div>
       </div>
-  </div>
-        </div>
-
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="exampleFormControlTextarea1"></label>
-            <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" placeholder="Notes" style="width:350px; height:150px;"></textarea>
+          <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" placeholder="Notes" style="width:350px; height:150px;"></textarea>
         </div>
       </div>
       <div class="form-group text-center">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="btn-create-reservation" type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
   </div>
-  <!-- RESERVATION FORM ENDS-->
+  <!-- CREATE RESERVATION FORM ENDS-->
+
+  <!-- UPDATE RESERVATION FORM BEGINS-->
+  <div class="update-reservation-form-div">
+    <form id='update-reservation-form'>
+      <div class="form">
+        <div class="div-input">
+          <h1>Update your Reservation</h1>
+          <div class="form-group col-md-4">
+            <label for="inputID"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputID" name="reservation[ID]" placeholder="ID" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputFirstName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputFirstName" name="reservation[firstName]" placeholder="First Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputLastName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputLastName" name="reservation[lastName]" placeholder="Last Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputEmail4"></label>
+            <input type="email" class="form-control reservation-form-input" id="inputEmail4" name="reservation[email]" placeholder="email" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPetName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputPetName" name="reservation[petName]" placeholder="Pet Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputService"></label>
+            <select id="inputService" class="form-control reservation-form-input" name="reservation[service]" required>
+              <option selected>Service</option>
+              <option>Daycare</option>
+              <option>Boarding</option>
+            </select>
+            <div class="form-group col-md-12">
+              <label for="inputDate"></label>
+              <input type="date" class="form-control reservation-form-input" id="inputDate" name="reservation[date]" placeholder="Date" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="exampleFormControlTextarea1"></label>
+          <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" placeholder="Notes" style="width:350px; height:150px;"></textarea>
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button id="btn-update-reservation" type="submit" class="btn btn-primary">Update</button>
+      </div>
+    </form>
+  </div>
+  <!-- UPDATE RESERVATION FORM ENDS-->
+
+  <!-- VIEW ALL RESERVATIONS FORM BEGINS-->
+  <div class="view-reservation-form-div">
+    <br>
+    <form id="get-reservations">
+      <h1 class="view-all-reservations-header">View All Reservations</h1>
+      <button id="btn-get-reservations" class="btn btn-primary">View All Reservations</button>
+    </form>
+  </div>
+  <div id="reservation-display"></div>
+  <!-- VIEW ALL RESERVATIONS FORM ENDS-->
+
+  <!-- REMOVE RESERVATION FORM BEGINS-->
+  <div class="remove-reservation-form-div">
+    <form id="delete-reservation">
+      <h1 class="remove-a-reservation-header">Remove a Reservation</h1>
+      <input class="input-remove-reservation" placeholder="ID" type="text" name=reservation[id] required>
+      <br>
+      <button id="btn-remove-reservation" class="btn btn-primary">Remove a Reservation</button>
+    </form>
+  </div>
+  <!-- REMOVE RESERVATION FORM ENDS-->
 
   <footer id="Contact">
-
     <h4>Get in touch or stop by!</h4>
     <div class="container">
       <address class="address">
@@ -248,8 +310,8 @@
         <br>
         <i class="fas fa-envelope">brooklynpet@gmail.com</i>
       </address>
-        <div id="map">
-        </div>
+      <div id="map">
+      </div>
     </div>
     <button id="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
     <p>&copy; 2020 Created by <a class="footer-linkedin" href="https://www.linkedin.com/in/nancy-cruz4510/" target="_blank">Nancy Cruz</a></p>
