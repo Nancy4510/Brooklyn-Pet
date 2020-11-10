@@ -16,15 +16,18 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-form').on('click', authEvents.onSignOut)
   $('.changePasswordDiv').hide()
-  $('#sign-out-form').hide()
+  $('#sign-out-form').show()
   $('.reservation-form-div').show()
-  $('.message').hide()
   $('#btnSignIn').on('click', function (event) {
+    $('.main-pet-image').hide()
+    $('.main-title').hide()
     $('.changePasswordDiv').show()
     $('.signOutDiv').show()
-    $('#div-services').hide()
-    $('#div-about').hide()
-    $('#div-contact').hide()
+    $('#Who-We-Are').hide()
+    $('#Services').hide()
+    $('.coming-soon-card').hide()
+    $('#Contact').show()
+    $('.reservation-form-div').show()
 
     $('#btnSignUp').on('click', function (event) {
       $('.changePasswordDiv').show()
