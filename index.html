@@ -183,44 +183,54 @@
   <div class="reservation-form-div">
     <form id='reservation-form'>
       <div class="form">
+
+        <div class="div-input">
+
+        <div class="form-group col-md-4">
+          <label for="inputFirstName"></label>
+          <input type="text" class="form-control reservation-form-input" id="inputFirstName" placeholder="First Name">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputLastName"></label>
+          <input type="text" class="form-control reservation-form-input" id="inputLastName" placeholder="Last Name">
+        </div>
+
         <div class="form-group col-md-4">
           <label for="inputEmail4"></label>
-          <input type="email" class="form-control reservation-form-input" id="inputEmail4" placeholder="First Name">
+          <input type="email" class="form-control reservation-form-input" id="inputEmail4" placeholder="email">
         </div>
-        <div class="form-group col-md-4">
-          <label for="inputPassword4"></label>
-          <input type="password" class="form-control reservation-form-input" id="inputPassword4" placeholder="Last Name">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputPassword4"></label>
-          <input type="password" class="form-control reservation-form-input" id="inputPassword4" placeholder="email">
-        </div>
-      </div>
+
       <div class="form-group col-md-4">
-        <label for="inputCity"></label>
-        <input type="text" class="form-control reservation-form-input" id="inputCity" placeholder="Pet Name">
+        <label for="inputPetName"></label>
+        <input type="text" class="form-control reservation-form-input" id="inputPetName" placeholder="Pet Name">
       </div>
+
       <div class="form-group col-md-4">
-        <label for="inputState"></label>
-        <select id="inputState" class="form-control reservation-form-input">
+        <label for="inputService"></label>
+        <select id="inputService" class="form-control reservation-form-input">
           <option selected>Service</option>
           <option>Daycare</option>
           <option>Boarding</option>
         </select>
-        <div class="form-group col-md-9">
-          <label for="inputEmail4"></label>
-          <input type="text" class="form-control reservation-form-input" id="inputEmail4" placeholder="Date">
+
+        <div class="form-group col-md-12">
+          <label for="inputDate"></label>
+          <input type="date" class="form-control reservation-form-input" id="inputDate" placeholder="Date">
         </div>
       </div>
+  </div>
+        </div>
+
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="exampleFormControlTextarea1"></label>
-            <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" placeholder="Notes" rows="10" cols="50"></textarea>
+            <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" placeholder="Notes" style="width:350px; height:150px;"></textarea>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
   <!-- RESERVATION FORM ENDS-->
@@ -238,8 +248,6 @@
         <br>
         <i class="fas fa-envelope">brooklynpet@gmail.com</i>
       </address>
-      <!-- <iframe class="mapbox-map"
-        src='https://api.mapbox.com/styles/v1/mapbox/streets-v11.html?title=false&zoomwheel=false&access_token=pk.eyJ1IjoibmFuY3k0NTEwIiwiYSI6ImNraDB4MG56cjFobmczM3F4NTAwOTU1bjkifQ.Gcp0TsL-sfWoR7fX6bvsIg#15/40.679420/-74.004830'></iframe> -->
         <div id="map">
         </div>
     </div>
