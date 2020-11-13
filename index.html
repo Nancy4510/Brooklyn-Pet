@@ -175,6 +175,8 @@
   </div>
 
   <!-- CREATE RESERVATION FORM BEGINS-->
+  <div class="container">
+
   <div class="create-reservation-form-div">
     <form id='create-reservation-form'>
       <div class="form">
@@ -213,7 +215,7 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="exampleFormControlTextarea1"></label>
-          <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" placeholder="Notes" style="width:350px; height:150px;"></textarea>
+          <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" name="reservation[notes]" placeholder="Notes" style="width:350px; height:150px;"></textarea>
         </div>
       </div>
       <div class="form-group text-center">
@@ -274,9 +276,13 @@
       </div>
     </form>
   </div>
+
+    </div>
   <!-- UPDATE RESERVATION FORM ENDS-->
 
   <!-- VIEW ALL RESERVATIONS FORM BEGINS-->
+  <div class="container">
+
   <div class="view-reservation-form-div text-center">
     <br>
     <form id="get-reservations">
@@ -295,6 +301,8 @@
       <br>
       <button id="btn-remove-reservation" class="btn btn-primary">Remove a Reservation</button>
     </form>
+  </div>
+
   </div>
   <!-- REMOVE RESERVATION FORM ENDS-->
 

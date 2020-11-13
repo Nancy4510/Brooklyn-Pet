@@ -7,6 +7,7 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
+const reservationsEvents = require('./reservations/events')
 
 $(() => {
   // your JS code goes here
@@ -15,6 +16,10 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-form').on('click', authEvents.onSignOut)
+  $('#create-reservation-form').on('submit', reservationsEvents.onCreateReservation)
+  $('#update-reservation-form').on('submit', reservationsEvents.onUpdateReservation)
+  $('#get-reservations').on('submit', reservationsEvents.onGetReservations)
+  $('#delete-reservation').on('submit', reservationsEvents.onDeleteReservation)
   $('.changePasswordDiv').hide()
   $('#sign-out-form').show()
   $('.reservation-form-div').show()
@@ -56,7 +61,7 @@ $(() => {
     })
   })
 
-  // code for map and maker from 'https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/#add-html-markers'
+  // code for map and marker from 'https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/#add-html-markers'
   mapboxgl.accessToken = 'pk.eyJ1IjoibmFuY3k0NTEwIiwiYSI6ImNraDB4MG56cjFobmczM3F4NTAwOTU1bjkifQ.Gcp0TsL-sfWoR7fX6bvsIg'
 
   const map = new mapboxgl.Map({
