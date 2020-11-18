@@ -33,7 +33,7 @@ const onGetReservationSuccess = function (data) {
           <h4>Service: ${reservation.service}<h4>
           <h4>Date: ${reservation.date}<h4>
           <h4>Notes: ${reservation.notes}<h4>
-          <h4>ID: ${reservation.id}</h4>
+          <h4>ID: ${reservation._id}</h4>
           <br>
         `)
       $('#reservation-display').append(reservationHTML)
@@ -41,11 +41,11 @@ const onGetReservationSuccess = function (data) {
   }
 }
 console.log('In onGetReservationSuccess')
-// successMessage('Get reservations success')
+// successMessage('Get reservations success!')
 
 const onGetReservationFailure = function () {
   console.log('In onGetReservationFailure')
-  successMessage('Get reservation failed!')
+  failureMessage('Get reservation failed! Sorry!')
 }
 const onCreateReservationSuccess = function (data) {
   store.reservation = data.reservation
@@ -56,7 +56,7 @@ const onCreateReservationSuccess = function (data) {
 const onCreateReservationFailure = function (data) {
   store.reservation = data.reservation
   console.log(store)
-  failureMessage('Created reservation failed')
+  failureMessage('Created reservation failed! Sorry!')
 }
 
 const onUpdateReservationSuccess = function (responseData) {
@@ -69,7 +69,7 @@ const onUpdateReservationSuccess = function (responseData) {
 
 const onUpdateReservationFailure = function (responsedata) {
   store.reservation = responsedata.reservation
-  failureMessage('Update reservation failed')
+  failureMessage('Update reservation failed! Sorry!')
 }
 
 const onDeleteReservationSuccess = function () {
@@ -80,7 +80,7 @@ const onDeleteReservationSuccess = function () {
 }
 
 const onDeleteReservationFailure = function () {
-  failureMessage('Delete reservation failed')
+  failureMessage('Delete reservation failed! Sorry!')
 }
 
 module.exports = {

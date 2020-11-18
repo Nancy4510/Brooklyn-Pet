@@ -11,14 +11,14 @@ const getReservation = function () {
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    method: 'GET'
+    method: 'GET' // --> to get all reservations
   })
 }
 
 const createReservation = function (data) {
   console.log('new reservation created')
   return $.ajax({
-    method: 'POST',
+    method: 'POST', // --> to create
     url: config.apiUrl + '/reservations/',
     headers: {
       Authorization: 'Token token=' + store.user.token
