@@ -21,28 +21,31 @@ const onGetReservationSuccess = function (data) {
     $('#reservation-display').html('Please create a reservation first to view all your reservations')
   } else {
     // config.reservation = data.reservation
-    // console.log(data)
+    console.log(data)
     successMessage('Viewing all reservations successfully!')
     $('#reservation-display').html('')
     data.reservations.forEach(reservation => {
       const reservationHTML = (`
-          <h4>Date: ${reservation.date}</h4>
-          <h4>Type of Pc: ${reservation.type_of_pc}</h4>
-          <h4>Model Number: ${reservation.model_number}</h4>
-          <h4>Description: ${reservation.description}<h4>
-          <h4>ID: ${reservation.id}</h4>
+          <h4>First Name: ${reservation.firstName}</h4>
+          <h4>Last Name: ${reservation.lastName}</h4>
+          <h4>Email: ${reservation.email}</h4>
+          <h4>Pet Name: ${reservation.petName}<h4>
+          <h4>Service: ${reservation.service}<h4>
+          <h4>Date: ${reservation.date}<h4>
+          <h4>Notes: ${reservation.notes}<h4>
+          <h4>ID: ${reservation._id}</h4>
           <br>
         `)
       $('#reservation-display').append(reservationHTML)
     })
   }
 }
-// console.log('In onGetReservationSuccess')
-// successMessage('Get reservations success')
+console.log('In onGetReservationSuccess')
+// successMessage('Get reservations success!')
 
 const onGetReservationFailure = function () {
-  // console.log('In onGetReservationFailure')
-  successMessage('Get reservation failed!')
+  console.log('In onGetReservationFailure')
+  failureMessage('Get reservation failed! Sorry!')
 }
 const onCreateReservationSuccess = function (data) {
   store.reservation = data.reservation
@@ -52,13 +55,13 @@ const onCreateReservationSuccess = function (data) {
 
 const onCreateReservationFailure = function (data) {
   store.reservation = data.reservation
-  // console.log(store)
-  failureMessage('Created reservation failed')
+  console.log(store)
+  failureMessage('Created reservation failed! Sorry!')
 }
 
 const onUpdateReservationSuccess = function (responseData) {
   store.reservation = responseData.reservation
-  // console.log(store)
+  console.log(store)
   $('#reservation-display').html('Your reservation has been updated! Click "View All Reservations" to see the updated changes.')
   successMessage('Updated reservation successfully!')
   $('form').trigger('reset')
@@ -66,7 +69,7 @@ const onUpdateReservationSuccess = function (responseData) {
 
 const onUpdateReservationFailure = function (responsedata) {
   store.reservation = responsedata.reservation
-  failureMessage('Update reservation failed')
+  failureMessage('Update reservation failed! Sorry!')
 }
 
 const onDeleteReservationSuccess = function () {
@@ -77,7 +80,7 @@ const onDeleteReservationSuccess = function () {
 }
 
 const onDeleteReservationFailure = function () {
-  failureMessage('Delete reservation failed')
+  failureMessage('Delete reservation failed! Sorry!')
 }
 
 module.exports = {

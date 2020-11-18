@@ -11,7 +11,7 @@ const onGetReservations = function () {
     .catch(ui.onGetReservationFailure)
 }
 
-const onCreateReservations = function (event) {
+const onCreateReservation = function (event) {
   const form = event.target
   event.preventDefault()
   const data = getFormFields(form)
@@ -20,7 +20,7 @@ const onCreateReservations = function (event) {
     .catch(ui.onCreateReservationFailure)
 }
 
-const onUpdateReservations = function (event) {
+const onUpdateReservation = function (event) {
   event.preventDefault()
   const formData = getFormFields(event.target)
   api.updateReservation(formData)
@@ -28,7 +28,7 @@ const onUpdateReservations = function (event) {
     .catch(ui.onUpdateReservationFailure)
 }
 
-const onDeleteReservations = function (event) {
+const onDeleteReservation = function (event) {
   event.preventDefault()
   const formData = getFormFields(event.target)
   api.deleteReservation(formData)
@@ -38,7 +38,7 @@ const onDeleteReservations = function (event) {
 
 module.exports = {
   onGetReservations,
-  onCreateReservations,
-  onUpdateReservations,
-  onDeleteReservations
+  onCreateReservation,
+  onUpdateReservation,
+  onDeleteReservation
 }
