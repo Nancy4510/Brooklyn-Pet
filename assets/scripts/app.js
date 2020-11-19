@@ -28,6 +28,7 @@ $(() => {
   $('.delete-reservation-form-div').hide()
   $('.create-update-res-cards').show()
   $('.view-delete-res-cards').show()
+  $('#go-back-btn').hide()
 
   $('#btnSignIn').on('click', function (event) {
     $('.main-pet-image').hide()
@@ -39,12 +40,22 @@ $(() => {
     $('.coming-soon-card').hide()
     $('.create-update-res-cards').show()
     $('.view-delete-res-cards').show()
+    $('#go-back-btn').hide()
     $('#Contact').show()
   })
 
   $('#btnSignUp').on('click', function (event) {
+    $('.main-pet-image').hide()
+    $('.main-title').hide()
     $('.changePasswordDiv').show()
     $('.signOutDiv').show()
+    $('#Who-We-Are').hide()
+    $('#Services').hide()
+    $('.coming-soon-card').hide()
+    $('.create-update-res-cards').show()
+    $('.view-delete-res-cards').show()
+    $('#go-back-btn').hide()
+    $('#Contact').show()
   })
 
   $('#btnSignOut').on('click', function (event) {
@@ -57,6 +68,8 @@ $(() => {
     $('.coming-soon-card').show()
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
+    $('#reservation-display').hide()
+    $('#go-back-btn').hide()
     $('#Contact').show()
   })
 
@@ -69,6 +82,8 @@ $(() => {
     $('.delete-reservation-form-div').hide()
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
+    // $('#reservation-display').show()
+    $('#go-back-btn').show()
   })
 
   // When the button 'Update' with the id of
@@ -80,6 +95,7 @@ $(() => {
     $('.delete-reservation-form-div').hide()
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
+    $('#go-back-btn').show()
   })
 
   // When the button 'View' with the id of
@@ -91,6 +107,7 @@ $(() => {
     $('.delete-reservation-form-div').hide()
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
+    $('#go-back-btn').show()
   })
 
   // When the button 'Delete' with the id of
@@ -102,6 +119,7 @@ $(() => {
     $('.view-reservation-form-div').hide()
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
+    $('#go-back-btn').show()
   })
 
   $('#btn-create-reservation').on('click', function (event) {
@@ -115,6 +133,8 @@ $(() => {
     $('.update-reservation-form-div').hide()
     $('.view-reservation-form-div').hide()
     $('.delete-reservation-form-div').hide()
+    $('#reservation-display').hide()
+    $('#go-back-btn').hide()
   })
 
   // Back to the top button code
