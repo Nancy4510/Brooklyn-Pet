@@ -174,43 +174,43 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row create-update-res-cards">
     <div class="col-sm-6">
       <div class="card card-reservation">
         <div class="card-body">
-          <h5 class="card-title">Create</h5>
+          <h5 class="card-title">Create a Reservation</h5>
           <p class="card-text">Want to make a reservation for your pet? Just click the button below to make a reservation.</p>
-          <a href="#" id="create-res-btn" class="btn btn-primary">Create a Reservation</a>
+          <a href="#" id="create-res-btn" class="btn btn-primary">Create</a>
         </div>
       </div>
     </div>
     <div class="col-sm-6">
       <div class="card card-reservation">
         <div class="card-body">
-          <h5 class="card-title">Update</h5>
+          <h5 class="card-title">Update a Reservation</h5>
           <p class="card-text">Want to update your reservation? No problem! Just click the button below to update your reservation. Just remeber to input your unique reservation ID.</p>
-          <a href="#" id="update-res-btn" class="btn btn-primary">Update Your Reservation</a>
+          <a href="#" id="update-res-btn" class="btn btn-primary">Update</a>
         </div>
       </div>
     </div>
   </div>
 <br>
-  <div class="row">
+  <div class="row view-delete-res-cards">
   <div class="col-sm-6">
     <div class="card card-reservation">
       <div class="card-body">
-        <h5 class="card-title">View</h5>
+        <h5 class="card-title">View Reservation(s)</h5>
         <p class="card-text">Viewing all your reservations is just a click away.</p>
-        <a href="#" id="view-res-btn" class="btn btn-primary">View Your Reservation(s)</a>
+        <a href="#" id="view-res-btn" class="btn btn-primary">View</a>
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card card-reservation">
       <div class="card-body">
-        <h5 class="card-title">Delete</h5>
+        <h5 class="card-title">Delete a Reservation</h5>
         <p class="card-text">If you would like to delete a reservation, no problem. Just remeber to input your unique reservation ID.</p>
-        <a href="#" id="delete-res-btn" class="btn btn-primary">Delete Your Reservation</a>
+        <a href="#" id="delete-res-btn" class="btn btn-primary">Delete</a>
       </div>
     </div>
   </div>
@@ -331,18 +331,22 @@
   <div id="reservation-display"></div>
   <!-- VIEW ALL RESERVATIONS FORM ENDS-->
 
-  <!-- REMOVE RESERVATION FORM BEGINS-->
-  <div class="remove-reservation-form-div text-center">
+  <!-- DELETE RESERVATION FORM BEGINS-->
+  <div class="delete-reservation-form-div text-center">
     <form id="delete-reservation-form">
       <h1 class="remove-a-reservation-header">Delete a Reservation</h1>
       <input class="input-remove-reservation" placeholder="ID" type="text" name=reservation[id] required>
       <br>
-      <button id="btn-remove-reservation" class="btn btn-primary">Remove a Reservation</button>
+      <button id="btn-delete-reservation" class="btn btn-primary">Delete a Reservation</button>
     </form>
   </div>
 
   </div>
-  <!-- REMOVE RESERVATION FORM ENDS-->
+  <!-- DELETE RESERVATION FORM ENDS-->
+
+  <div class="text-center">
+    <button id="go-back-btn" class="btn btn-info"><i class="fas fa-chevron-left left-arrow"></i>Back</button>
+  </div>
 
   <footer id="Contact">
     <h4>Get in touch or stop by!</h4>

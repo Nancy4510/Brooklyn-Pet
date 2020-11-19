@@ -49,38 +49,38 @@ const onGetReservationFailure = function () {
 }
 const onCreateReservationSuccess = function (data) {
   store.reservation = data.reservation
-  successMessage('Created reservation successfully!')
+  successMessage('Your reservation has been created! You are all set!')
   $('form').trigger('reset')
 }
 
 const onCreateReservationFailure = function (data) {
   store.reservation = data.reservation
   console.log(store)
-  failureMessage('Created reservation failed! Sorry!')
+  failureMessage('Your reservation could not be created. Sorry!')
 }
 
 const onUpdateReservationSuccess = function (responseData) {
   store.reservation = responseData.reservation
   console.log(store)
   $('#reservation-display').html('Your reservation has been updated! Click "View All Reservations" to see the updated changes.')
-  successMessage('Updated reservation successfully!')
+  successMessage('Your reservation has been updated successfully! You are all set!')
   $('form').trigger('reset')
 }
 
 const onUpdateReservationFailure = function (responsedata) {
   store.reservation = responsedata.reservation
-  failureMessage('Update reservation failed! Sorry!')
+  failureMessage('Your reservation could not be updated. Sorry!')
 }
 
 const onDeleteReservationSuccess = function () {
   store.reservation = null
   $('#reservation-display').html("Your reservation has been deleted! Click 'View All Reservations' to see any remaing reservation(s).")
-  successMessage('Deleted reservation successfully!')
+  successMessage('Your reservation has been deleted successfully!')
   $('#delete-reservation').trigger('reset')
 }
 
 const onDeleteReservationFailure = function () {
-  failureMessage('Delete reservation failed! Sorry!')
+  failureMessage('Your reservation could not be deleted. Sorry!')
 }
 
 module.exports = {
