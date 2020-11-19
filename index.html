@@ -174,67 +174,54 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card card-reservation">
+        <div class="card-body">
+          <h5 class="card-title">Create</h5>
+          <p class="card-text">Want to make a reservation for your pet? Just click the button below to make a reservation.</p>
+          <a href="#" id="create-res-btn" class="btn btn-primary">Create a Reservation</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card card-reservation">
+        <div class="card-body">
+          <h5 class="card-title">Update</h5>
+          <p class="card-text">Want to update your reservation? No problem! Just click the button below to update your reservation. Just remeber to input your unique reservation ID.</p>
+          <a href="#" id="update-res-btn" class="btn btn-primary">Update Your Reservation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+  <div class="row">
+  <div class="col-sm-6">
+    <div class="card card-reservation">
+      <div class="card-body">
+        <h5 class="card-title">View</h5>
+        <p class="card-text">Viewing all your reservations is just a click away.</p>
+        <a href="#" id="view-res-btn" class="btn btn-primary">View Your Reservation(s)</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card card-reservation">
+      <div class="card-body">
+        <h5 class="card-title">Delete</h5>
+        <p class="card-text">If you would like to delete a reservation, no problem. Just remeber to input your unique reservation ID.</p>
+        <a href="#" id="delete-res-btn" class="btn btn-primary">Delete Your Reservation</a>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- CREATE RESERVATION FORM BEGINS-->
-
-
   <div class="create-reservation-form-div">
     <form id='create-reservation-form'>
       <div class="form">
         <div class="div-input">
-          <h1>Create your Reservation</h1>
-          <div class="form-group col-md-4">
-            <label for="inputFirstName"></label>
-            <input type="text" class="form-control reservation-form-input" id="inputFirstName" name="reservation[firstName]" placeholder="First Name">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputLastName"></label>
-            <input type="text" class="form-control reservation-form-input" id="inputLastName" name="reservation[lastName]" placeholder="Last Name">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputEmail4"></label>
-            <input type="email" class="form-control reservation-form-input" id="inputEmail4" name="reservation[email]" placeholder="email">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputPetName"></label>
-            <input type="text" class="form-control reservation-form-input" id="inputPetName" name="reservation[petName]" placeholder="Pet Name">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputService"></label>
-            <select id="inputService" class="form-control reservation-form-input" name="reservation[service]">
-              <option selected>Service</option>
-              <option>Daycare</option>
-              <option>Boarding</option>
-            </select>
-            <div class="form-group col-md-12">
-              <label for="inputDate"></label>
-              <input type="date" class="form-control reservation-form-input" id="inputDate" name="reservation[date]" placeholder="Date">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-4">
-          <label for="exampleFormControlTextarea1"></label>
-          <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" name="reservation[notes]" placeholder="Notes" style="width:350px; height:150px;"></textarea>
-        </div>
-      </div>
-      <div class="form-group text-center">
-        <button id="btn-create-reservation" class="btn btn-primary">Submit</button>
-      </div>
-    </form>
-  </div>
-  <!-- CREATE RESERVATION FORM ENDS-->
-
-  <!-- UPDATE RESERVATION FORM BEGINS-->
-  <div class="update-reservation-form-div">
-    <form id='update-reservation-form'>
-      <div class="form">
-        <div class="div-input">
-          <h1>Update your Reservation</h1>
-          <div class="form-group col-md-4">
-            <label for="inputID"></label>
-            <input type="text" class="form-control reservation-form-input" id="inputID" name="reservation[id]" placeholder="ID" required>
-          </div>
+          <h1 class="create-res-form-title">Create a Reservation</h1>
           <div class="form-group col-md-4">
             <label for="inputFirstName"></label>
             <input type="text" class="form-control reservation-form-input" id="inputFirstName" name="reservation[firstName]" placeholder="First Name" required>
@@ -268,6 +255,59 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="exampleFormControlTextarea1"></label>
+          <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" name="reservation[notes]" placeholder="Notes" style="width:350px; height:150px;"></textarea>
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button id="btn-create-reservation" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+  <!-- CREATE RESERVATION FORM ENDS-->
+
+  <!-- UPDATE RESERVATION FORM BEGINS-->
+  <div class="update-reservation-form-div">
+    <form id='update-reservation-form'>
+      <div class="form">
+        <div class="div-input">
+          <h1 class="update-res-form-title">Update a Reservation</h1>
+          <div class="form-group col-md-4">
+            <label for="inputID"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputID" name="reservation[id]" placeholder="ID" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputFirstName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputFirstName" name="reservation[firstName]" placeholder="First Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputLastName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputLastName" name="reservation[lastName]" placeholder="Last Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputEmail4"></label>
+            <input type="email" class="form-control reservation-form-input" id="inputEmail4" name="reservation[email]" placeholder="email" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPetName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputPetName" name="reservation[petName]" placeholder="Pet Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputService"></label>
+            <select id="inputService" class="form-control reservation-form-input" name="reservation[service]" required>
+              <option selected>Service</option>
+              <option>Daycare</option>
+              <option>Boarding</option>
+            </select>
+            <div class="form-group col-md-12">
+              <label for="inputDate"></label>
+              <input type="date" class="form-control reservation-form-input" id="start" min="01-01-2019" max="12-31-2020" name="reservation[date]" placeholder="Date" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="exampleFormControlTextarea1"></label>
           <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" placeholder="Notes" style="width:350px; height:150px;"></textarea>
         </div>
       </div>
@@ -276,8 +316,6 @@
       </div>
     </form>
   </div>
-
-
   <!-- UPDATE RESERVATION FORM ENDS-->
 
   <!-- VIEW ALL RESERVATIONS FORM BEGINS-->
@@ -296,7 +334,7 @@
   <!-- REMOVE RESERVATION FORM BEGINS-->
   <div class="remove-reservation-form-div text-center">
     <form id="delete-reservation-form">
-      <h1 class="remove-a-reservation-header">Remove a Reservation</h1>
+      <h1 class="remove-a-reservation-header">Delete a Reservation</h1>
       <input class="input-remove-reservation" placeholder="ID" type="text" name=reservation[id] required>
       <br>
       <button id="btn-remove-reservation" class="btn btn-primary">Remove a Reservation</button>

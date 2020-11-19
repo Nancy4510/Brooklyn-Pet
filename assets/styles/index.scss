@@ -173,14 +173,52 @@ h4 {
   text-decoration: none;
 }
 
+.card-reservation {
+  margin-left: 100px;
+  width: 500px;
+}
+
 .create-reservation-form-div,
-.update-reservation-form-div,
-.view-reservation-form-div,
-.remove-reservation-form-div {
-  border: solid 2px red;
+.update-reservation-form-div {
+  //background-color: #e7a61a;
+  border-radius: 20px;
+  box-shadow: -1px 3px 16px 1px rgba(0,0,0,0.75);
+  height: 790px;
   margin: auto;
   margin-top: 20px;
   width: 800px;
+}
+
+.create-res-form-title,
+.update-res-form-title {
+  padding-top: 25px;
+  margin-left: 140px;
+}
+
+.update-reservation-form-div {
+  height: 870px;
+}
+
+.view-reservation-form-div {
+  //border: solid 2px red;
+  margin: auto;
+  margin-top: 20px;
+  width: 800px;
+}
+
+#btn-get-reservations {
+  height: 50px;
+}
+
+.remove-reservation-form-div {
+  //border: solid 2px red;
+  margin: auto;
+  margin-top: 20px;
+  width: 800px;
+}
+
+#btn-remove-reservation {
+  margin-top: 10px;
 }
 
 #reservation-form {
