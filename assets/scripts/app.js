@@ -21,11 +21,14 @@ $(() => {
   $('#get-reservations-form').on('submit', reservationsEvents.onGetReservations)
   $('#delete-reservation-form').on('submit', reservationsEvents.onDeleteReservation)
   $('.changePasswordDiv').hide()
-  $('#sign-out-form').hide()
+  $('.signOutDiv').hide()
   $('.create-reservation-form-div').hide()
   $('.update-reservation-form-div').hide()
   $('.view-reservation-form-div').hide()
-  $('.remove-reservation-form-div').hide()
+  $('.delete-reservation-form-div').hide()
+  $('.create-update-res-cards').show()
+  $('.view-delete-res-cards').show()
+
   $('#btnSignIn').on('click', function (event) {
     $('.main-pet-image').hide()
     $('.main-title').hide()
@@ -34,6 +37,8 @@ $(() => {
     $('#Who-We-Are').hide()
     $('#Services').hide()
     $('.coming-soon-card').hide()
+    $('.create-update-res-cards').show()
+    $('.view-delete-res-cards').show()
     $('#Contact').show()
   })
 
@@ -45,50 +50,71 @@ $(() => {
   $('#btnSignOut').on('click', function (event) {
     $('.changePasswordDiv').hide()
     $('.signOutDiv').hide()
+    $('.main-pet-image').show()
+    $('.main-title').show()
+    $('#Who-We-Are').show()
+    $('#Services').show()
+    $('.coming-soon-card').show()
+    $('.create-update-res-cards').hide()
+    $('.view-delete-res-cards').hide()
+    $('#Contact').show()
   })
 
-  // When the button 'Create A Reservation' with the id of
+  // When the button 'Create' with the id of
   // 'create-res-btn' is clicked, the 'create reservation form is shown.'
   $('#create-res-btn').on('click', function (event) {
     $('.create-reservation-form-div').show()
     $('.update-reservation-form-div').hide()
     $('.view-reservation-form-div').hide()
-    $('.remove-reservation-form-div').hide()
-    // $('#create-res-btn').hide()
+    $('.delete-reservation-form-div').hide()
+    $('.create-update-res-cards').hide()
+    $('.view-delete-res-cards').hide()
   })
 
-  // When the button 'Update Your Reservation' with the id of
+  // When the button 'Update' with the id of
   // 'update-res-btn' is clicked, the 'update reservation form is shown.'
   $('#update-res-btn').on('click', function (event) {
     $('.update-reservation-form-div').show()
     $('.create-reservation-form-div').hide()
     $('.view-reservation-form-div').hide()
-    $('.remove-reservation-form-div').hide()
-    // $('#create-res-btn').hide()
+    $('.delete-reservation-form-div').hide()
+    $('.create-update-res-cards').hide()
+    $('.view-delete-res-cards').hide()
   })
 
-  // When the button 'View Your Reservation' with the id of
+  // When the button 'View' with the id of
   // 'view-res-btn' is clicked, the 'view reservation form is shown.'
   $('#view-res-btn').on('click', function (event) {
     $('.view-reservation-form-div').show()
     $('.create-reservation-form-div').hide()
     $('.update-reservation-form-div').hide()
-    $('.remove-reservation-form-div').hide()
-    // $('#create-res-btn').hide()
+    $('.delete-reservation-form-div').hide()
+    $('.create-update-res-cards').hide()
+    $('.view-delete-res-cards').hide()
   })
 
-  // When the button 'Delete Your Reservation' with the id of
+  // When the button 'Delete' with the id of
   // 'delete-res-btn' is clicked, the 'delete reservation form is shown.'
   $('#delete-res-btn').on('click', function (event) {
-    $('.remove-reservation-form-div').show()
+    $('.delete-reservation-form-div').show()
     $('.create-reservation-form-div').hide()
     $('.update-reservation-form-div').hide()
     $('.view-reservation-form-div').hide()
-    // $('#create-res-btn').hide()
+    $('.create-update-res-cards').hide()
+    $('.view-delete-res-cards').hide()
   })
 
   $('#btn-create-reservation').on('click', function (event) {
     $('.create-reservation-form-div').hide()
+  })
+
+  $('#go-back-btn').on('click', function (event) {
+    $('.create-update-res-cards').show()
+    $('.view-delete-res-cards').show()
+    $('.create-reservation-form-div').hide()
+    $('.update-reservation-form-div').hide()
+    $('.view-reservation-form-div').hide()
+    $('.delete-reservation-form-div').hide()
   })
 
   // Back to the top button code
