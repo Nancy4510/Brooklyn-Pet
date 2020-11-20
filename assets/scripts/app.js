@@ -34,7 +34,7 @@ $(() => {
   $('#btnSignIn').on('click', function (event) {
     $('.main-pet-image').hide()
     $('.main-title').hide()
-    $('#sign-up-form').hide()
+    $('.sign-up-li').hide()
     $('.changePasswordDiv').show()
     $('.signOutDiv').show()
     $('#Who-We-Are').hide()
@@ -50,7 +50,7 @@ $(() => {
   $('#btnSignUp').on('click', function (event) {
     $('.main-pet-image').hide()
     $('.main-title').hide()
-    $('#sign-in-form').hide()
+    $('.sign-in-li').hide()
     $('.changePasswordDiv').show()
     $('.signOutDiv').show()
     $('#Who-We-Are').hide()
@@ -64,8 +64,10 @@ $(() => {
   })
 
   $('#btnSignOut').on('click', function (event) {
-    $('#sign-up-form').show()
-    $('#sign-in-form').show()
+    $('.sign-in-li').show()
+    $('.sign-up-li').show()
+    $('#sign-in-form').toggle()
+    $('#sign-up-form').toggle()
     $('.changePasswordDiv').hide()
     $('.signOutDiv').hide()
     $('.main-pet-image').show()
@@ -91,7 +93,6 @@ $(() => {
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
     $('.welcome-user-div').hide()
-    // $('#reservation-display').show()
     $('#go-back-btn').show()
   })
 
