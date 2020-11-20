@@ -25,20 +25,61 @@ const onGetReservationSuccess = function (data) {
     // config.reservation = data.reservation
     console.log(data)
     successMessage('Viewing all reservations successfully!')
-    $('#reservation-display').html('')
+    $('#reservation-id-display').html('')
     data.reservations.forEach(reservation => {
       const reservationHTML = (`
-          <h4>ID: ${reservation._id}</h4>
-          <h4>First Name: ${reservation.firstName}</h4>
-          <h4>Last Name: ${reservation.lastName}</h4>
-          <h4>Email: ${reservation.email}</h4>
-          <h4>Pet Name: ${reservation.petName}<h4>
-          <h4>Service: ${reservation.service}<h4>
-          <h4>Date: ${reservation.date}<h4>
-          <h4>Notes: ${reservation.notes}<h4>
-          <br>
+            <p>${reservation._id}</p>
         `)
-      $('#reservation-display').append(reservationHTML)
+      $('#reservation-id-display').append(reservationHTML)
+    })
+    $('#reservation-firstName-display').html('')
+    data.reservations.forEach(reservation => {
+      const reservationHTML = (`
+            <p>${reservation.firstName}</p>
+        `)
+      $('#reservation-firstName-display').append(reservationHTML)
+    })
+    $('#reservation-lastName-display').html('')
+    data.reservations.forEach(reservation => {
+      const reservationHTML = (`
+            <p>${reservation.lastName}</p>
+        `)
+      $('#reservation-lastName-display').append(reservationHTML)
+    })
+    $('#reservation-email-display').html('')
+    data.reservations.forEach(reservation => {
+      const reservationHTML = (`
+            <p>${reservation.email}</p>
+        `)
+      $('#reservation-email-display').append(reservationHTML)
+    })
+    $('#reservation-petName-display').html('')
+    data.reservations.forEach(reservation => {
+      const reservationHTML = (`
+            <p>${reservation.petName}</p>
+        `)
+      $('#reservation-petName-display').append(reservationHTML)
+    })
+    $('#reservation-service-display').html('')
+    data.reservations.forEach(reservation => {
+      const reservationHTML = (`
+            <p>${reservation.service}</p>
+        `)
+      $('#reservation-service-display').append(reservationHTML)
+    })
+    $('#reservation-date-display').html('')
+    data.reservations.forEach(reservation => {
+      const reservationHTML = (`
+            <p>${reservation.date}</p>
+        `)
+      $('#reservation-date-display').append(reservationHTML)
+    })
+    $('#reservation-notes-display').html('')
+    data.reservations.forEach(reservation => {
+      const reservationHTML = (`
+            <p>${reservation.notes}</p>
+        `)
+      $('#reservation-notes-display').append(reservationHTML)
     })
   }
 }
@@ -63,7 +104,7 @@ const onCreateReservationFailure = function (data) {
 
 const onUpdateReservationSuccess = function (responseData) {
   store.reservation = responseData.reservation
-  console.log(store)
+  console.log('store:' + store)
   $('#reservation-display').html('Your reservation has been updated! Click "View All Reservations" to see the updated changes.')
   successMessage('Your reservation has been updated successfully! You are all set!')
   $('form').trigger('reset')
