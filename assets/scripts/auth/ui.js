@@ -22,7 +22,6 @@ const onSignUpSucess = function (responseData) {
   store.user = responseData.user
   $('form').trigger('reset')
   $('.dropdown').collapse('hide')
-  $('#welcome-user-title').html(`Welcome ${store.user.email} !`)
 }
 
 const onSignUpFailure = function () {
@@ -32,11 +31,9 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
   store.user = responseData.user
-  $('.signIn').hide()
-  $('#sign-up-form').hide()
   $('form').trigger('reset')
   $('.dropdown').collapse('hide')
-  $('#welcome-user-title').html(`Welcome back, ${store.user.email} !`)
+  $('#welcome-user-title').html(`Welcome, ${store.user.email}!`)
 }
 
 const onSignInFailure = function () {

@@ -28,6 +28,7 @@ const onGetReservationSuccess = function (data) {
     $('#reservation-display').html('')
     data.reservations.forEach(reservation => {
       const reservationHTML = (`
+          <h4>ID: ${reservation._id}</h4>
           <h4>First Name: ${reservation.firstName}</h4>
           <h4>Last Name: ${reservation.lastName}</h4>
           <h4>Email: ${reservation.email}</h4>
@@ -35,7 +36,6 @@ const onGetReservationSuccess = function (data) {
           <h4>Service: ${reservation.service}<h4>
           <h4>Date: ${reservation.date}<h4>
           <h4>Notes: ${reservation.notes}<h4>
-          <h4>ID: ${reservation._id}</h4>
           <br>
         `)
       $('#reservation-display').append(reservationHTML)
@@ -51,7 +51,7 @@ const onGetReservationFailure = function () {
 }
 const onCreateReservationSuccess = function (data) {
   store.reservation = data.reservation
-  successMessage('Your reservation has been created! You are all set!')
+  successMessage('Your reservation has been created! You are all set! To view this reservation, you can go back and click the view button to view this reservation.')
   $('form').trigger('reset')
 }
 
