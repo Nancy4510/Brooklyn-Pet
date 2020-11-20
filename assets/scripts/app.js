@@ -140,6 +140,15 @@ $(() => {
     $('.create-reservation-form-div').hide()
   })
 
+  $('#btn-update-reservation').on('click', function (event) {
+    $('.update-reservation-form-div').hide()
+  })
+
+  // $('#btn-get-reservations').on('click', function (event) {
+  //   $('.view-all-reservations-header').hide()
+  //   $('#btn-get-reservations').hide()
+  // })
+
   $('#go-back-btn').on('click', function (event) {
     $('.create-update-res-cards').show()
     $('.view-delete-res-cards').show()
