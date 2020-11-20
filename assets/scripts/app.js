@@ -26,13 +26,15 @@ $(() => {
   $('.update-reservation-form-div').hide()
   $('.view-reservation-form-div').hide()
   $('.delete-reservation-form-div').hide()
-  $('.create-update-res-cards').show()
-  $('.view-delete-res-cards').show()
+  $('.create-update-res-cards').hide()
+  $('.view-delete-res-cards').hide()
+  $('.welcome-user-div').hide()
   $('#go-back-btn').hide()
 
   $('#btnSignIn').on('click', function (event) {
     $('.main-pet-image').hide()
     $('.main-title').hide()
+    $('#sign-up-form').hide()
     $('.changePasswordDiv').show()
     $('.signOutDiv').show()
     $('#Who-We-Are').hide()
@@ -40,6 +42,7 @@ $(() => {
     $('.coming-soon-card').hide()
     $('.create-update-res-cards').show()
     $('.view-delete-res-cards').show()
+    $('.welcome-user-div').show()
     $('#go-back-btn').hide()
     $('#Contact').show()
   })
@@ -47,6 +50,7 @@ $(() => {
   $('#btnSignUp').on('click', function (event) {
     $('.main-pet-image').hide()
     $('.main-title').hide()
+    $('#sign-in-form').hide()
     $('.changePasswordDiv').show()
     $('.signOutDiv').show()
     $('#Who-We-Are').hide()
@@ -54,11 +58,14 @@ $(() => {
     $('.coming-soon-card').hide()
     $('.create-update-res-cards').show()
     $('.view-delete-res-cards').show()
+    $('.welcome-user-div').show()
     $('#go-back-btn').hide()
     $('#Contact').show()
   })
 
   $('#btnSignOut').on('click', function (event) {
+    $('#sign-up-form').show()
+    $('#sign-in-form').show()
     $('.changePasswordDiv').hide()
     $('.signOutDiv').hide()
     $('.main-pet-image').show()
@@ -70,6 +77,7 @@ $(() => {
     $('.view-delete-res-cards').hide()
     $('#reservation-display').hide()
     $('#go-back-btn').hide()
+    $('.welcome-user-div').hide()
     $('#Contact').show()
   })
 
@@ -82,6 +90,7 @@ $(() => {
     $('.delete-reservation-form-div').hide()
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
+    $('.welcome-user-div').hide()
     // $('#reservation-display').show()
     $('#go-back-btn').show()
   })
@@ -95,6 +104,7 @@ $(() => {
     $('.delete-reservation-form-div').hide()
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
+    $('.welcome-user-div').hide()
     $('#go-back-btn').show()
   })
 
@@ -107,6 +117,8 @@ $(() => {
     $('.delete-reservation-form-div').hide()
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
+    $('#reservation-display').show()
+    $('.welcome-user-div').hide()
     $('#go-back-btn').show()
   })
 
@@ -119,6 +131,7 @@ $(() => {
     $('.view-reservation-form-div').hide()
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
+    $('.welcome-user-div').hide()
     $('#go-back-btn').show()
   })
 
@@ -134,6 +147,7 @@ $(() => {
     $('.view-reservation-form-div').hide()
     $('.delete-reservation-form-div').hide()
     $('#reservation-display').hide()
+    $('.welcome-user-div').show()
     $('#go-back-btn').hide()
   })
 

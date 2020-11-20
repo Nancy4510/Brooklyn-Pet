@@ -4,14 +4,16 @@ const store = require('../store')
 // const config = require('./../config')
 
 const successMessage = function (newText) {
-  $('#message').text(newText)
+  $('#message').text(newText).fadeTo(0, 1)
+  $('#message').text(newText).fadeTo(7000, 0)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
   $('form').trigger('reset')
 }
 
 const failureMessage = function (newText) {
-  $('#message').text(newText)
+  $('#message').text(newText).fadeTo(0, 1)
+  $('#message').text(newText).fadeTo(7000, 0)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
 }
