@@ -3,22 +3,26 @@
 const store = require('../store')
 
 const successMessage = function (newText) {
-  $('#message').text(newText)
+  $('#message').text(newText).fadeTo(0, 1)
+  $('#message').text(newText).fadeTo(7000, 0)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  $('form').trigger('reset')
 }
 
 const failureMessage = function (newText) {
-  $('#message').text(newText)
+  $('#message').text(newText).fadeTo(0, 1)
+  $('#message').text(newText).fadeTo(7000, 0)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
 }
 
 const onSignUpSucess = function (responseData) {
-  successMessage('You have successfully signed up! Now you can sign in!')
+  successMessage('You have successfully signed up!')
   store.user = responseData.user
   $('form').trigger('reset')
-  $('#welcome-user').html(`Welcome ${store.user.email} !`)
+  $('.dropdown').collapse('hide')
+  $('#welcome-user-title').html(`Welcome ${store.user.email} !`)
 }
 
 const onSignUpFailure = function () {
@@ -29,8 +33,10 @@ const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
   store.user = responseData.user
   $('.signIn').hide()
+  $('#sign-up-form').hide()
   $('form').trigger('reset')
-  $('#welcome-user').html(`Welcome ${store.user.email} !`)
+  $('.dropdown').collapse('hide')
+  $('#welcome-user-title').html(`Welcome back, ${store.user.email} !`)
 }
 
 const onSignInFailure = function () {
