@@ -66,10 +66,14 @@ $(() => {
   $('#btnSignOut').on('click', function (event) {
     $('.sign-in-li').show()
     $('.sign-up-li').show()
-    $('#sign-in-form').toggle()
-    $('#sign-up-form').toggle()
+    // $('#sign-in-form').toggle()
+    // $('#sign-up-form').toggle()
     $('.changePasswordDiv').hide()
     $('.signOutDiv').hide()
+    $('.create-reservation-form-div').hide()
+    $('.update-reservation-form-div').hide()
+    $('.view-reservation-form-div').hide()
+    $('.delete-reservation-form-div').hide()
     $('.main-pet-image').show()
     $('.main-title').show()
     $('#Who-We-Are').show()
@@ -106,6 +110,7 @@ $(() => {
     $('.create-update-res-cards').hide()
     $('.view-delete-res-cards').hide()
     $('.welcome-user-div').hide()
+    $('.th').hide()
     $('#go-back-btn').show()
   })
 
@@ -143,11 +148,6 @@ $(() => {
   $('#btn-update-reservation').on('click', function (event) {
     $('.update-reservation-form-div').hide()
   })
-
-  // $('#btn-get-reservations').on('click', function (event) {
-  //   $('.view-all-reservations-header').hide()
-  //   $('#btn-get-reservations').hide()
-  // })
 
   $('#go-back-btn').on('click', function (event) {
     $('.create-update-res-cards').show()

@@ -5,7 +5,7 @@ const store = require('../store')
 
 const getReservation = function () {
   // make GET request to /reservations
-  console.log('in getReservation')
+  // console.log('in getReservation')
   return $.ajax({
     url: config.apiUrl + '/reservations/',
     headers: {
@@ -16,7 +16,7 @@ const getReservation = function () {
 }
 
 const createReservation = function (data) {
-  console.log('new reservation created')
+  // console.log('new reservation created')
   return $.ajax({
     method: 'POST', // --> to create
     url: config.apiUrl + '/reservations/',
@@ -28,7 +28,7 @@ const createReservation = function (data) {
 }
 
 const updateReservation = function (formData) {
-  console.log('reservation updated')
+  // console.log('reservation updated')
   return $.ajax({
     url: config.apiUrl + '/reservations/' + formData.reservation.id,
     headers: {
@@ -40,7 +40,7 @@ const updateReservation = function (formData) {
 }
 
 const deleteReservation = function (formData) {
-  console.log('reservation deleted')
+  // console.log('reservation deleted')
   return $.ajax({
     url: config.apiUrl + '/reservations/' + formData.reservation.id,
     headers: {
