@@ -36,4 +36,4 @@ This application will allow users to create reservations for their furry friend!
 
 - Link to the deployed back-end: [Deployed Back-End](https://pure-stream-26809.herokuapp.com/)
 
-- Link to the deployed site: [Brooklyn Pet](https://nancy4510.github.io/project2_client/)
+- Link to the deployed site: [Brooklyn Pet](https://nancy4510.github.io/Brooklyn-Pet-Client/#Home)
