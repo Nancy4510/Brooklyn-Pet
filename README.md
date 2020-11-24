@@ -1,8 +1,8 @@
-# **Brooklyn Pet (client side)**
+# **Brooklyn Pet Client-Side**
 
-This application will allow users to create reservations for their furry friend.
+This application will allow users to create reservations for their furry friend! They can create, update, view and delete a reservation. In order to create a reservation, the user will need to sign up or if they are a returning user, they can sign in.
 
-# **User Stories For Reservation**
+# **User Stories**
 
 - As a user I want to be able to sign up and sign in successfully.
 
@@ -20,15 +20,19 @@ This application will allow users to create reservations for their furry friend.
 
 # **Technologies Used**
 - HTML
+
 - CSS
+
 - JavaScript
+
 - JQuery
+
 - Bootstrap
 
 # **API Repository**
-- Link to the API repo: [API Repository](https://github.com/Nancy4510/Brooklyn-Pet-API)
+- Link to the API repo: [Brooklyn Pet API Repository](https://github.com/Nancy4510/Brooklyn-Pet-API)
 
-- Link to the client repo: [Client Repository](https://github.com/Nancy4510/Brooklyn-Pet-Client)
+- Link to the client repo: [Brooklyn Pet Client Repository](https://github.com/Nancy4510/Brooklyn-Pet-Client)
 
 - Link to the deployed back-end: [Deployed Back-End](https://pure-stream-26809.herokuapp.com/)
 
