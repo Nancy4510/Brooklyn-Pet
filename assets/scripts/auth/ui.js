@@ -22,6 +22,7 @@ const onSignUpSucess = function (responseData) {
   store.user = responseData.user
   $('form').trigger('reset')
   $('.dropdown').collapse('hide')
+  $('#welcome-user-title').html(`Welcome, ${store.user.email}!`)
 }
 
 const onSignUpFailure = function () {
