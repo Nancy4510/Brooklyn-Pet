@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Brooklyn Pet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="https://kit.fontawesome.com/f3a8f57985.js" crossorigin="anonymous"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Who-We-Are">Who We Are</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Contact">Contact</a>
+        </li>
+
+        <!-- SIGN IN FORM BEGINS-->
+        <li class="nav-item dropdown sign-in-li">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sign-In
+          </a>
+          <form id='sign-in-form' class="dropdown-menu p-4">
+            <div class="form-group">
+              <label for="exampleDropdownFormEmail2">Email</label>
+              <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="exampleDropdownFormPassword2">Password</label>
+              <input type="password" name="credentials[password]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
+            </div>
+            <button id='btnSignIn' type="submit" class="btn btn-primary">Sign-in</button>
+          </form>
+
+        </li>
+        <!-- SIGN IN FORM ENDS-->
+
+        <!-- SIGN UP FORM BEGINS-->
+        <li class="nav-item dropdown sign-up-li">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sign-Up
+          </a>
+          <form id='sign-up-form' class="dropdown-menu p-4">
+            <div class="form-group">
+              <label for="exampleDropdownFormEmail2">Email</label>
+              <input type="email" name="credentials[email]" class="form-control" id="exampleDropdownFormEmail2" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="exampleDropdownFormPassword2">Password</label>
+              <input type="password" name="credentials[password]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
+              <label for="exampleDropdownFormPassword2">Confirm Password</label>
+              <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
+            </div>
+            <button id='btnSignUp' type="submit" class="btn btn-primary">Sign-up</button>
+          </form>
+        </li>
+        <!-- SIGN UP FORM ENDS-->
+
+        <!-- CHANGE PASSWORD FORM BEGINS-->
+        <div class="changePasswordDiv">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Change Password
+            </a>
+            <form id='change-password-form' class="dropdown-menu p-4">
+              <div class="form-group">
+                <label for="exampleDropdownFormPassword2">Old Password</label>
+                <input type="password" name="passwords[old]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
+                <label for="exampleDropdownFormPassword2">New Password</label>
+                <input type="password" name="passwords[new]" class="form-control" id="exampleDropdownFormPassword2" placeholder="">
+              </div>
+              <button id='btnChangePassword' type="submit" class="btn btn-primary">Change Password</button>
+            </form>
+          </li>
+        </div>
+        <!-- CHANGE PASSWORD FORM ENDS-->
+
+        <!-- SIGN OUT FORM BEGINS-->
+        <div class="signOutDiv">
+          <form id='sign-out-form'>
+            <button id='btnSignOut' class="btn btn-primary">Sign Out</button>
+          </form>
+        </div>
+        <!-- SIGN OUT FORM ENDS-->
+
+      </ul>
+    </div>
+    <i class="fas fa-cat fa-3x pet-icon"></i>
+    <i class="fas fa-dog fa-3x fa-flip-horizontal pet-icon"></i>
+  </nav>
+
+  <p id="message"></p>
+
+  <img class='main-pet-image' src="https://res.cloudinary.com/dyiugkn4y/image/upload/v1601565925/Brooklyn%20Pet%20Project/dog1.jpg" alt="">
+  <h1 class='main-title'>Br<i class="fas fa-paw fa-sm"></i><i class="fas fa-paw fa-sm"></i>klyn Pet</h1>
+
+  <section id="Who-We-Are" class="who-we-are-section">
+    <h3 class="who-we-are-title">Who We Are</h3>
+    <div class="container who-we-are-div">
+      <p class="p-sections who-we-are-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <img class="who-we-are-img" src="https://res.cloudinary.com/dyiugkn4y/image/upload/v1603568378/Brooklyn%20Pet%20Project/cat%20and%20dog.jpg" alt="">
+    </div>
+  </section>
+
+  <section id="Services" class="services-section">
+    <h3 class="services-title">Services</h3>
+    <div class="container services-section-div">
+      <div class="container cards">
+
+        <div class="card card-1" style="width: 18rem;">
+          <img src="https://res.cloudinary.com/dyiugkn4y/image/upload/v1594608309/Brooklyn%20Pet%20Project/dog-daycare.jpg" class="card-img-top img-dog-daycare" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Daycare</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card card-2" style="width: 18rem;">
+          <img src="https://res.cloudinary.com/dyiugkn4y/image/upload/v1601565308/Brooklyn%20Pet%20Project/pets-boarding.jpg" class="card-img-top img-pets-boarding" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Boarding</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card card-3" style="width: 18rem;">
+          <img src="https://res.cloudinary.com/dyiugkn4y/image/upload/v1594608305/Brooklyn%20Pet%20Project/cat-additional-services.jpg" class="card-img-top img-cat-additional-services" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Additional Services</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="coming-soon-card">
+    <div class="card text-center">
+      <div class="card-header">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title coming-soon-title">Coming Soon!</h5>
+        <p class="card-text coming-soon-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="card-footer text-muted">
+      </div>
+    </div>
+  </div>
+
+<div class="welcome-user-div">
+  <h2 id="welcome-user-title"></h2>
+  <p class="welcome-user-p">To begin, if you are a new user, you can go ahead and create a reservation for your pet. Returning users can update, view or delete a reservaion. Or you can go ahead and create another reservaion. We can't wait to see your pet! 🐕 🐈‍⬛</p>
+</div>
+
+<div class="go-back-btn-div">
+  <button id="go-back-btn" class="btn btn-info"><i class="fas fa-chevron-left left-arrow"></i>Back</button>
+</div>
+
+  <div class="row create-update-res-cards">
+    <div class="col-sm-6">
+      <div class="card card-reservation">
+        <div class="card-body">
+          <h5 class="card-title">Create a Reservation 📝</h5>
+          <p class="card-text">Want to make a reservation for your pet? Just click the button below to make a reservation.</p>
+          <a href="#" id="create-res-btn" class="btn btn-primary">Create</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card card-reservation">
+        <div class="card-body">
+          <h5 class="card-title">Update a Reservation ✍️</h5>
+          <p class="card-text">Want to update your reservation? No problem! Just click the button below to update your reservation. Just remeber to input your unique reservation ID.</p>
+          <a href="#" id="update-res-btn" class="btn btn-primary">Update</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+  <div class="row view-delete-res-cards">
+  <div class="col-sm-6">
+    <div class="card card-reservation">
+      <div class="card-body">
+        <h5 class="card-title">View Reservation(s) 👀</h5>
+        <p class="card-text">Viewing all your reservations is just a click away.</p>
+        <a href="#" id="view-res-btn" class="btn btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card card-reservation">
+      <div class="card-body">
+        <h5 class="card-title">Delete a Reservation ❌</h5>
+        <p class="card-text">If you would like to delete a reservation, no problem. Just remeber to input your unique reservation ID.</p>
+        <a href="#" id="delete-res-btn" class="btn btn-primary">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- CREATE RESERVATION FORM BEGINS-->
+  <div class="create-reservation-form-div">
+    <form id='create-reservation-form'>
+      <div class="form">
+        <div class="div-input">
+          <h1 class="create-res-form-title">Create a Reservation</h1>
+          <div class="form-group col-md-4">
+            <label for="inputFirstName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputFirstName" name="reservation[firstName]" placeholder="First Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputLastName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputLastName" name="reservation[lastName]" placeholder="Last Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputEmail4"></label>
+            <input type="email" class="form-control reservation-form-input" id="inputEmail4" name="reservation[email]" placeholder="email" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPetName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputPetName" name="reservation[petName]" placeholder="Pet Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputService"></label>
+            <select id="inputService" class="form-control reservation-form-input" name="reservation[service]" required>
+              <option selected>Service</option>
+              <option>Daycare</option>
+              <option>Boarding</option>
+            </select>
+            <div class="form-group col-md-12">
+              <label for="inputDate"></label>
+              <input type="date" class="form-control reservation-form-input" id="start" min="01-01-2019" max="12-31-2020" name="reservation[date]" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="exampleFormControlTextarea1"></label>
+          <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" name="reservation[notes]" placeholder="Notes" style="width:350px; height:150px;"></textarea>
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button id="btn-create-reservation" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+  <!-- CREATE RESERVATION FORM ENDS-->
+
+  <!-- UPDATE RESERVATION FORM BEGINS-->
+  <div class="update-reservation-form-div">
+    <form id='update-reservation-form'>
+      <div class="form">
+        <div class="div-input">
+          <h1 class="update-res-form-title">Update a Reservation</h1>
+          <div class="form-group col-md-4">
+            <label for="inputID"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputID" name="reservation[id]" placeholder="ID" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputFirstName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputFirstName" name="reservation[firstName]" placeholder="First Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputLastName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputLastName" name="reservation[lastName]" placeholder="Last Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputEmail4"></label>
+            <input type="email" class="form-control reservation-form-input" id="inputEmail4" name="reservation[email]" placeholder="email" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPetName"></label>
+            <input type="text" class="form-control reservation-form-input" id="inputPetName" name="reservation[petName]" placeholder="Pet Name" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputService"></label>
+            <select id="inputService" class="form-control reservation-form-input" name="reservation[service]" required>
+              <option selected>Service</option>
+              <option>Daycare</option>
+              <option>Boarding</option>
+            </select>
+            <div class="form-group col-md-12">
+              <label for="inputDate"></label>
+              <input type="date" class="form-control reservation-form-input" id="start" min="01-01-2019" max="12-31-2020" name="reservation[date]" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="exampleFormControlTextarea1"></label>
+          <textarea class="form-control reservation-form-input" id="exampleFormControlTextarea1" name="reservation[notes]" placeholder="Notes" style="width:350px; height:150px;"></textarea>
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button id="btn-update-reservation" type="submit" class="btn btn-primary">Update</button>
+      </div>
+    </form>
+  </div>
+  <!-- UPDATE RESERVATION FORM ENDS-->
+
+  <!-- VIEW ALL RESERVATIONS FORM BEGINS-->
+  <div class="container">
+  <div class="view-reservation-form-div text-center">
+    <br>
+    <form id="get-reservations-form">
+      <h1 class="view-all-reservations-header">View All Reservations</h1>
+      <button id="btn-get-reservations" class="btn btn-primary">View All Reservations</button>
+    </form>
+    <br>
+    <table class="table">
+  <thead>
+    <tr>
+      <th class="th" scope="col">ID</th>
+      <th class="th" scope="col">First Name</th>
+      <th class="th" scope="col">Last Name</th>
+      <th class="th" scope="col">Email</th>
+      <th class="th" scope="col">Pet Name</th>
+      <th class="th" scope="col">Service</th>
+      <th class="th" scope="col">Date</th>
+      <th class="th" scope="col">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><p id="reservation-id-display"></p></th>
+      <td><p id="reservation-firstName-display"></p></td>
+      <td><p id="reservation-lastName-display"></p></td>
+      <td><p id="reservation-email-display"></p></td>
+      <td><p id="reservation-petName-display"></p></td>
+      <td><p id="reservation-service-display"></p></td>
+      <td><p id="reservation-date-display"></p></td>
+      <td><p id="reservation-notes-display"></p></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+  <!-- VIEW ALL RESERVATIONS FORM ENDS-->
+
+  <!-- DELETE RESERVATION FORM BEGINS-->
+  <div class="delete-reservation-form-div text-center">
+    <form id="delete-reservation-form">
+      <h1 class="remove-a-reservation-header">Delete a Reservation</h1>
+      <input class="input-remove-reservation" placeholder="ID" type="text" name=reservation[id] required>
+      <br>
+      <button id="btn-delete-reservation" class="btn btn-primary">Delete a Reservation</button>
+    </form>
+  </div>
+
+  </div>
+  <!-- DELETE RESERVATION FORM ENDS-->
+
+  <footer id="Contact">
+    <h4>Get in touch or stop by!</h4>
+    <div class="container">
+      <address class="address">
+        <i class="fas fa-map-marker-alt">123 Union St. <br> Brooklyn, N.Y, 11231</i>
+        <br>
+        <i class="fas fa-clock">Monday - Friday: 8am-7pm <br> Saturday-Sunday: 10am-6pm</i>
+        <br>
+        <i class="fas fa-phone">(718)123-4567</i>
+        <br>
+        <i class="fas fa-envelope">brooklynpet@gmail.com</i>
+      </address>
+      <div id="map">
+      </div>
+    </div>
+    <button id="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
+    <p>&copy; 2020 Created by <a class="footer-linkedin" href="https://www.linkedin.com/in/nancy-cruz4510/" target="_blank">Nancy Cruz</a></p>
+  </footer>
+</body>
+
+</html>
